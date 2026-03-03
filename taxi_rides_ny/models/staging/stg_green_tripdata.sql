@@ -1,4 +1,5 @@
 -- select * from taxi_rides_ny.prod.green_tripdata
+
 select
     -- identifiers
     cast(vendorid as int) as vendor_id,

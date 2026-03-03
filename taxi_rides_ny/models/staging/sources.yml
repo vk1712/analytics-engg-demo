@@ -1,0 +1,28 @@
+# when using dbt core (local) - use this -
+version: 2
+
+sources:
+  - name: raw_data
+    description: "Raw data from NYC taxi rides"
+    database: taxi_rides_ny
+    schema: prod
+    tables:
+      - name: yellow_taxi
+        description: "Yellow taxi ride data - local"
+      - name: green_taxi
+        description: "Green taxi ride data - local"
+
+
+# when using dbt cloud - use this -
+# version: 2
+
+# sources:
+#   - name: raw_data
+#     description: "Raw data from NYC taxi rides"
+#     database: kestra-sandbox-486514  # GCP Project ID
+#     schema: nytaxi  # BigQuery Dataset name
+#     tables:
+#       - name: yellow_tripdata_non_partitioned  # BigQuery table name
+#         description: "Yellow taxi ride data - cloud"
+#       - name: green_tripdata_non_partitioned  # BigQuery table name
+#         description: "Green taxi ride data - cloud"

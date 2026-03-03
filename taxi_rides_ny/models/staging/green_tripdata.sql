@@ -1,1 +1,0 @@
-select * from taxi_rides_ny.prod.green_tripdata

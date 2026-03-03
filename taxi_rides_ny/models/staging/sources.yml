@@ -1,10 +1,24 @@
+# When working on dbt core (Local) - use this
 version: 2
 
 sources:
   - name: raw_data
     description: "Raw data sources for NYC taxi rides"
-    database: taxi_rides_ny.duckdb
+    database: taxi_rides_ny
     schema: prod
     tables:
       - name: green_tripdata
       - name: yellow_tripdata
+
+
+# When working on dbt cloud - use this
+# version: 2
+
+# sources:
+  # - name: raw_data
+    # description: "Raw data sources for NYC taxi rides"
+    # database: kestra-sandbox-486514  # GCP Project ID
+    # schema: ny_taxi  # BigQuery Dataset name
+    # tables:
+      # - name: green_tripdata_non_partitioned  # table name from the BigQuery Dataset
+      # - name: yellow_tripdata_non_partitioned

@@ -7,9 +7,9 @@ sources:
     database: taxi_rides_ny
     schema: prod
     tables:
-      - name: yellow_taxi
+      - name: yellow_tripdata
         description: "Yellow taxi ride data - local"
-      - name: green_taxi
+      - name: green_tripdata
         description: "Green taxi ride data - local"
 
 

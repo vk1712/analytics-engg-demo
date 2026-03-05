@@ -9,6 +9,8 @@ trips_unioned as (
         union all
     select * from yellow_tripdata
 )
--- select * from trips_unioned
--- select distinct vendor_id from trips_unioned
-select distinct pickup_location_id from trips_unioned
+select *
+-- select distinct vendor_id
+-- select distinct pickup_location_id
+-- select distinct trip_type
+from trips_unioned;
